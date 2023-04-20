@@ -20,8 +20,10 @@ public class HttpClient {
     public String getHtml() {
         try {
             URL url = new URL(this.url);
-            URLConnection urlConnection = url.openConnection();                                                    // 打开连接
-            BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(), "utf-8")); // 获取输入流
+            // 打开连接
+            URLConnection urlConnection = url.openConnection();
+            // 获取输入流
+            BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(), "utf-8"));
             String line = null;
             StringBuilder sb = new StringBuilder();
             while ((line = br.readLine()) != null) {

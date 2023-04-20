@@ -12,10 +12,10 @@ import javax.annotation.Resource;
 public class RunIt {
 
     @Resource
-    private HttpClient httpClient;
+    private HttpClient httpClient;  // 使用自定义业务类
 
     public void hello() {
-        System.out.println(httpClient.getHtml());
+        System.out.println(httpClient.getHtml());   // 调用自定义方法
     }
 
 }
